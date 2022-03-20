@@ -1,0 +1,12 @@
+version: '3.4'
+
+services:
+  mypydevenv:
+    image: mypydevenv
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    volumes:
+      - type: bind
+        source: .
+        target: /app/
